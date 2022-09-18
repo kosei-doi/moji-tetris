@@ -8,7 +8,7 @@
     <title>Ranking</title>
 </head>
 <body>
-    <table class="table" id="data">
+    <table class="table table-striped" id="data">
         <h1 id="load">ローディング中...</h1>
     </table>
     <a href="./index.html" class="btn btn-outline-primary">戻る</a>
@@ -28,9 +28,15 @@
             datas.sort((a, b) => b.score - a.score);
 
 
-            html += '<thead><tr><th scope="col">#</th><th scope="col">名前</th><th scope="col">点数</th></tr></thead><tbody>';
+            html += '<thead class="table-dark"><tr><th scope="col">#</th><th scope="col">名前</th><th scope="col">点数</th></tr></thead><tbody>';
+            
+            let assets = ["table-warning","table-success","table-info","table-primary","table-primary","table-danger","table-danger","table-danger","table-danger","table-danger"];
             for(let i=0;i<datas.length;i++){
-                html += '<tr><th scope="row">'+ (i+1).toString() + '</th><td>' + datas[i]["name"] + '</td><td>' + datas[i]["score"].toString() + '</td></tr>'
+                if(i < 10){
+                    html += '<tr class="'+ assets[i] + '"><th scope="row">'+ (i+1).toString() + '</th><td>' + datas[i]["name"] + '</td><td>' + datas[i]["score"].toString() + '</td></tr>'
+                }else{
+                    html += '<tr><th scope="row">'+ (i+1).toString() + '</th><td>' + datas[i]["name"] + '</td><td>' + datas[i]["score"].toString() + '</td></tr>'
+                }
             }
             html += '</tbody>';
 
