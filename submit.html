@@ -21,6 +21,7 @@
                     </div>                   
                     <div> 
                         <button class="btn btn-primary me-2" type="submit">ランキングに追加</button>
+                        <a href="./rank.html" class="btn btn-outline-primary">ランキング</a>
                     </div>
                 </form>
             </div>
@@ -58,8 +59,8 @@
         form.addEventListener('submit', e => {
             e.preventDefault()
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then()//window.location.href = "https://kosei-doi.github.io/moji-tetris/")
-            .catch(error => $("#form_alerts").html("<div class='alert alert-danger'>Contact message not sent.</div>"))
+            .then(response => $("#form_alerts").html("<div class='alert alert-success'>ランキングに載りました。</div>"))
+            .catch(error => $("#form_alerts").html("<div class='alert alert-danger'>送信に失敗しました。\n"+ error + "</div>"))
         })
     </script>
 </body>

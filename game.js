@@ -224,7 +224,10 @@ class Game{
 
         let note = document.getElementById("game-flag");
         note.innerText = "左右、下に指を動かして操作、タップで回転。または\n右:右矢印、左:左矢印、下:下矢印、回転：上矢印";
-    }
+
+        let bottons = document.getElementById("bottons");
+        bottons.innerHTML = '<div class="btn-group" style="display: flex; justify-content: center; margin-left: 20%; margin-right:20%; margin-top: 10px; margin-bottom: 10px;"><a href="./rank.html" class="btn btn-outline-primary">ランキング</a><form action="./submit.html" id="form"><button type="submit" class="btn btn-outline-warning" id="rank">ランキングに追加</button></form></div>';
+        }
 
     endBgm(){
         try{
