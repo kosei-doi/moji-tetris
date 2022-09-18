@@ -59,7 +59,7 @@
         form.addEventListener('submit', e => {
             e.preventDefault()
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => $("#form_alerts").html("<div class='alert alert-success'>ランキングに載りました。</div>"))
+            .then(response => $("#form_alerts").html("<div class='alert alert-success'>ランキングが更新されました。。</div>"))
             .catch(error => $("#form_alerts").html("<div class='alert alert-danger'>送信に失敗しました。\n"+ error + "</div>"))
         })
     </script>
