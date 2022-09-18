@@ -111,8 +111,6 @@ class Game{
                     this.mino.rotate();
                     this.mino.rotate();
                 }
-                transAudio = new Audio(musicsPath +"trans.mp3");
-                transAudio.play();
                 can.height = FIELD_ROW * TETORO_SIZE;
                 this.drawAll();
             }
@@ -133,8 +131,6 @@ class Game{
                     this.mino.x--;
                 }
                 startX = event.changedTouches[0].pageX;
-                transAudio = new Audio(musicsPath +"trans.mp3");
-                transAudio.play();
                 can.height = FIELD_ROW * TETORO_SIZE;
                 this.drawAll();
             }
@@ -144,8 +140,6 @@ class Game{
                     this.mino.x++;
                 }
                 startX = event.changedTouches[0].pageX;
-                transAudio = new Audio(musicsPath +"trans.mp3");
-                transAudio.play();
                 can.height = FIELD_ROW * TETORO_SIZE;
                 this.drawAll();
             }
@@ -156,8 +150,6 @@ class Game{
                 }
 
                 startY = event.changedTouches[0].pageY;
-                transAudio = new Audio(musicsPath +"trans.mp3");
-                transAudio.play();
                 can.height = FIELD_ROW * TETORO_SIZE;
                 this.drawAll();
             }
