@@ -14,14 +14,11 @@ let ctx = can.getContext("2d");
 
 button = document.getElementById("start-game");
 
-let bottons = document.getElementById("bottons");
-
 let game = new Game(GAME_SPEEED);
 button.onclick = () =>{
     if(firstFlag){
         game.start();
         firstFlag = false;
-        bottons.innerHTML = "";
     }else{
         game.flag = true;
         game.endBgm();
