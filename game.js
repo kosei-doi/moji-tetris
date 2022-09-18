@@ -223,7 +223,7 @@ class Game{
         ctx.fillText("GAME OVER...",0,TETORO_SIZE*FIELD_ROW/2);
 
         let note = document.getElementById("game-flag");
-        note.innerText = "右:右矢印、左:左矢印、下:下矢印、回転：上矢印";
+        note.innerText = "左右、下に指を動かして操作、タップで回転。または\n右:右矢印、左:左矢印、下:下矢印、回転：上矢印";
     }
 
     endBgm(){
