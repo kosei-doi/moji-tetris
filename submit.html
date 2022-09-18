@@ -58,7 +58,7 @@
         form.addEventListener('submit', e => {
             e.preventDefault()
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(window.location.href = "https://kosei-doi.github.io/moji-tetris/rank.html")
+            .then(window.location.href = "https://kosei-doi.github.io/moji-tetris/")
             .catch(error => $("#form_alerts").html("<div class='alert alert-danger'>Contact message not sent.</div>"))
         })
     </script>
