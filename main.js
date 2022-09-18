@@ -1,3 +1,13 @@
+let form = document.getElementById("form");
+
+form.addEventListener('formdata', (e) => {
+    var fd = e.formData;
+    
+    // データをセット
+    fd.set('score', game.score);
+});
+
+
 const TETORO_SIZE = 28;
 const LETTERS_PADDING = 5;
 const FIELD_COL = 10;
@@ -28,11 +38,3 @@ button.onclick = () =>{
 
 }
 
-let form = document.getElementById("form");
-
-form.addEventListener('formdata', (e) => {
-    var fd = e.formData;
-    
-    // データをセット
-    fd.set('score', game.score);
-});
