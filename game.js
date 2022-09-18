@@ -175,7 +175,7 @@ class Game{
             can.height = FIELD_ROW * TETORO_SIZE;
             this.drawAll();
             if(this.mino.flag){
-                this.gameSpeed -= 1;
+                this.gameSpeed -= 0.5;
 
                 putAudio.play();
                 this.mino = new TMino(Math.floor( Math.random() * TETORO_LENGTH),Math.round(FIELD_COL/2)-1,0,TETORO_SIZE,LETTERS_PADDING,this);

@@ -27,3 +27,12 @@ button.onclick = () =>{
     }
 
 }
+
+let form = document.getElementById("form");
+
+form.addEventListener('formdata', (e) => {
+    var fd = e.formData;
+    
+    // データをセット
+    fd.set('score', game.score);
+});
