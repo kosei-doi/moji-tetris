@@ -37,7 +37,6 @@ class Game{
         this.word = new Word();
         this.field = new Field(FIELD_COL,FIELD_ROW,TETORO_SIZE,this);        
         this.mino = new TMino(Math.floor( Math.random() * TETORO_LENGTH ),Math.round(FIELD_COL/2)-1,0,TETORO_SIZE,LETTERS_PADDING); 
-    
     }
 
     Gameloop(){
@@ -53,13 +52,17 @@ class Game{
                     this.mino.rotate();
                     this.mino.rotate();
                 }
-            }else if(keyCode == "Space"){
-                this.mino.rotate();
-                if(this.mino.collision(this.field)){
-                    this.mino.rotate();
-                    this.mino.rotate();
-                    this.mino.rotate();
+            }
+            if(keyCode == "Space"){
+                let flag = true;
+                while(flag){
+                    this.mino.y++;
+                    if(this.mino.collision(this.field)){
+                        this.mino.y--;
+                        flag = false;
+                    }
                 }
+                this.mino.checkDeath();
             }
             if(keyCode == "ArrowLeft"){
                     this.mino.x--;
@@ -203,6 +206,9 @@ class Game{
     }
 
     start(){
+        let button = document.getElementById("start-game");
+        let frame = document.getElementById("frame");
+        frame.removeChild(button);
         this.Gameloop();
     }
 
@@ -222,6 +228,8 @@ class Game{
         ctx.font = "40px serif";
         ctx.fillText("GAME OVER...",0,TETORO_SIZE*FIELD_ROW/2);
 
+        let button = document.getElementById("frame");
+        button.innerHTML = '<button type="button" id="start-game" class="btn btn-success">ゲーム開始</button>';
         let note = document.getElementById("game-flag");
         note.innerText = "左右、下に指を動かして操作、タップで回転。または\n右:右矢印、左:左矢印、下:下矢印、回転：上矢印";
         }
