@@ -37,9 +37,12 @@ class Game{
         this.word = new Word();
         this.field = new Field(FIELD_COL,FIELD_ROW,TETORO_SIZE,this);   
         let num =  Math.random() * (TETORO_LENGTH + 3);
-        console.log(TETORO_LENGTH);
         
-        this.mino = new TMino(Math.floor( 0 ),Math.round(FIELD_COL/2)-1,0,TETORO_SIZE,LETTERS_PADDING); 
+        if(num >= 7){
+            num = 6;
+        }
+        
+        this.mino = new TMino(num,Math.round(FIELD_COL/2)-1,0,TETORO_SIZE,LETTERS_PADDING); 
     }
 
     Gameloop(){
@@ -184,7 +187,14 @@ class Game{
                 this.gameSpeed -= 0.5;
 
                 putAudio.play();
-                this.mino = new TMino(Math.floor( Math.random() * TETORO_LENGTH),Math.round(FIELD_COL/2)-1,0,TETORO_SIZE,LETTERS_PADDING,this);
+                
+                let num =  Math.random() * (TETORO_LENGTH + 3);
+        
+                if(num >= 7){
+                    num = 6;
+                }
+
+                this.mino = new TMino(num,Math.round(FIELD_COL/2)-1,0,TETORO_SIZE,LETTERS_PADDING,this);
                 this.score += 100;
                 
                 this.drawAll();
