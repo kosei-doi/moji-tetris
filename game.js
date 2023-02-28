@@ -36,7 +36,7 @@ class Game{
 
         this.word = new Word();
         this.field = new Field(FIELD_COL,FIELD_ROW,TETORO_SIZE,this);   
-        let num =  Math.random() * (TETORO_LENGTH + 3);
+        let num = Math.floor(Math.random() * (TETORO_LENGTH + 3));
         
         if(num >= 7){
             num = 0;
