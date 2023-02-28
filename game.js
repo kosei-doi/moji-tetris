@@ -42,6 +42,8 @@ class Game{
             num = 0;
         }
         
+        console.log(num);
+        
         this.mino = new TMino(num,Math.round(FIELD_COL/2)-1,0,TETORO_SIZE,LETTERS_PADDING); 
     }
 
