@@ -190,7 +190,7 @@ class Game{
 
                 putAudio.play();
                 
-                let num =  Math.random() * (TETORO_LENGTH + 3);
+                let num = Math.floor(Math.random() * (TETORO_LENGTH + 3));
         
                 if(num >= 7){
                     num = 0;
