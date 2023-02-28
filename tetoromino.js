@@ -231,7 +231,7 @@ function getTInfo(seed,type){
 
 
 function tNum(num){
-    num = Math.Floor(Math.random * 10);
+    num = Math.floor(Math.random * 10);
     if(num > 6){
         num = 6
     }
