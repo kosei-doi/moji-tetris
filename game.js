@@ -39,7 +39,7 @@ class Game{
         let num =  Math.random() * (TETORO_LENGTH + 3);
         
         if(num >= 7){
-            num = 6;
+            num = 0;
         }
         
         this.mino = new TMino(num,Math.round(FIELD_COL/2)-1,0,TETORO_SIZE,LETTERS_PADDING); 
@@ -191,7 +191,7 @@ class Game{
                 let num =  Math.random() * (TETORO_LENGTH + 3);
         
                 if(num >= 7){
-                    num = 6;
+                    num = 0;
                 }
 
                 this.mino = new TMino(num,Math.round(FIELD_COL/2)-1,0,TETORO_SIZE,LETTERS_PADDING,this);
