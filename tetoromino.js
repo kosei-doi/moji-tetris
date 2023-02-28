@@ -231,10 +231,5 @@ function getTInfo(seed,type){
 
 
 function tNum(num){
-    num = Math.floor(Math.random * 10);
-    if(num > 6){
-        num = 6
-    }
-    
     return [getTInfo(num,"tile"),getTInfo(num,"color"),decideLetters(getTInfo(num,"tile"))];
 }
