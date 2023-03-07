@@ -70,7 +70,7 @@ class Game{
                         flag = false;
                     }
                 }
-                this.mino.checkDeath();
+                this.mino.checkDeath(this.field);
             }
             if(keyCode == "ArrowLeft"){
                     this.mino.x--;
