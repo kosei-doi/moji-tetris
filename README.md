@@ -1,4 +1,5 @@
 # 文字テトリス
+[リンク](https://kosei-doi.github.io/moji-tetris/)
 通常のテトリスに文字が揃うとブロックが消える機能を追加<br>
 [詳細動画](https://www.instagram.com/p/CioyJ_CBBWa/)
 ## 特徴
